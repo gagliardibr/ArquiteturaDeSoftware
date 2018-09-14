@@ -9,6 +9,27 @@ package ado1.Composite;
  *
  * @author brunagagliardi
  */
-public class Chip {
+public class Chip extends Eletronicos {
+
+    private String tipoChip;
+
+    public Chip(String nome) {
+        super(nome);
+        this.tipoChip = tipoChip;
+    }
+
+    public String getTipoChip() {
+        return tipoChip;
+    }
+
+    public void setTipoChip(String tipoChip) {
+        this.tipoChip = tipoChip;
+    }
     
+     @Override
+    public void getInfo() {
+        System.out.println("Chip: " + super.getEquipamento() + " " + this.tipoChip);
+    }
+    
+
 }

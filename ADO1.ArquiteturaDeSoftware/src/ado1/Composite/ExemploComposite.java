@@ -11,4 +11,15 @@ package ado1.Composite;
  */
 public class ExemploComposite {
     
+    public static void main(String[] args){
+    
+        ProjetoEquipamento proj = new ProjetoEquipamento("Computador");
+        
+        proj.getProjetos().add(new Capacitor(""));
+        
+        
+        
+        
+        proj.getInfo();
+    }
 }
