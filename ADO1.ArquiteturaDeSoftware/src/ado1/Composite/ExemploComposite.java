@@ -10,16 +10,28 @@ package ado1.Composite;
  * @author brunagagliardi
  */
 public class ExemploComposite {
-    
-    public static void main(String[] args){
-    
-        ProjetoEquipamento proj = new ProjetoEquipamento("Computador");
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
         
-        proj.getProjetos().add(new Capacitor(""));
+        ProjetoEletronico projeto = new ProjetoEletronico("Computador");
+        
+        projeto.getProjetos().add(new Capacitor("Marca 1", "Capacitor 1"));
+        projeto.getProjetos().add(new Chip("Marca 2", "Capacitor 2"));
+        projeto.getProjetos().add(new Indutor("Marca 3", "Capacitor 3"));
+        projeto.getProjetos().add(new Resistor("Marca 4", "Capacitor 4"));
         
         
+        Computador pc = new Computador("Modelo 55");
+        pc.getComputador().add(new Chip("modelo 2","Chip 3"));
+        
+        projeto.getProjetos().add(pc);  
+        
+        projeto.getInfo();
         
         
-        proj.getInfo();
     }
+    
 }

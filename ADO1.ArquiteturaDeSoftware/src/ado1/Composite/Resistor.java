@@ -9,16 +9,16 @@ package ado1.Composite;
  *
  * @author brunagagliardi
  */
-public class Resistor extends Eletronicos {
+public class Resistor extends Equipamento {
 
     private String tipoResistor;
 
-    public Resistor(String nome) {
+    public Resistor(String tipoResistor, String nome) {
         super(nome);
         this.tipoResistor = tipoResistor;
     }
 
-    public String getTipoResistor() {
+   public String getTipoResistor() {
         return tipoResistor;
     }
 
@@ -28,7 +28,8 @@ public class Resistor extends Eletronicos {
     
     @Override
     public void getInfo() {
-        System.out.println("Chip: " + super.getEquipamento() + " " + this.getTipoResistor());
+        System.out.println("Resistor: " + super.getNome() + " " +  this.getTipoResistor());
     }
 
+    
 }

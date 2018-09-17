@@ -9,26 +9,27 @@ package ado1.Composite;
  *
  * @author brunagagliardi
  */
-public class Capacitor extends Eletronicos {
+public class Capacitor extends Equipamento {
 
-    private String tipoCapcitor;
+    
+    private String tipoCapacitor;
 
-    public Capacitor(String nome) {
+    public Capacitor(String tipoCapacitor, String nome) {
         super(nome);
-        this.tipoCapcitor = tipoCapcitor;
+        this.tipoCapacitor = tipoCapacitor;
     }
 
-    public String getTipoCapcitor() {
-        return tipoCapcitor;
+  public String getTipoCapacitor() {
+        return tipoCapacitor;
     }
 
-    public void setTipoCapcitor(String tipoCapcitor) {
-        this.tipoCapcitor = tipoCapcitor;
+    public void setTipoCapacitor(String tipoCapacitor) {
+        this.tipoCapacitor = tipoCapacitor;
+    }
+
+    @Override
+    public void getInfo() {
+        System.out.println("Capacitor: " + super.getNome() + " " +  this.getTipoCapacitor());
     }
     
-      @Override
-    public void getInfo() {
-        System.out.println("Chip: " + super.getEquipamento() + " " + this.getTipoCapcitor());
-    }
-
 }

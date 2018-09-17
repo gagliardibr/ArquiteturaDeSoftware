@@ -9,15 +9,15 @@ package ado1.Composite;
  *
  * @author brunagagliardi
  */
-public class Indutor extends Eletronicos {
+public class Indutor extends Equipamento {
 
     private String tipoIndutor;
 
-    public Indutor(String nome, String tipoIndutor) {
+    public Indutor(String tipoIndutor, String nome) {
         super(nome);
         this.tipoIndutor = tipoIndutor;
     }
-    
+
     public String getTipoIndutor() {
         return tipoIndutor;
     }
@@ -26,9 +26,9 @@ public class Indutor extends Eletronicos {
         this.tipoIndutor = tipoIndutor;
     }
     
-      @Override
+    @Override
     public void getInfo() {
-        System.out.println("Chip: " + super.getEquipamento() + " " + this.getTipoIndutor());
+        System.out.println("Indutor: " + super.getNome() + " " +  this.getTipoIndutor());
     }
-
+    
 }
